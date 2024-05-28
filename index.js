@@ -16,6 +16,12 @@ function getComputerChoice() {
 // create new function "getHumanChoice"
 // Create prompt message requesting user to input the choices
 // I need to somehow store the STRING value of user input into the function and return "HumanChoice"
+
+// to modify playround function from typing to respond to click
+const rockBtn = document.querySelector(".rockBtn");
+const paperBtn = document.querySelector(".paperBtn");
+const sciBtn = document.querySelector(".sciBtn");
+
 function getHumanChoice() {
   const HumanChoice = prompt("Rock? Paper? Scissors?");
   return HumanChoice;
@@ -77,10 +83,14 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
+rockBtn.addEventListener("click", playRound);
+paperBtn.addEventListener("click", playRound);
+sciBtn.addEventListener("click", playRound);
+
 // create entire game with variable "playGame"
 // need to play 5 round, so probably LOOP 5 times
 // move "playRound" inside "playGame"
-
+/*
 function playGame() {
   for (let round = 1; round < 6; round++) {
     let humanSelection = getHumanChoice().toUpperCase();
@@ -103,3 +113,4 @@ function playGame() {
 }
 
 playGame();
+*/
